@@ -51,6 +51,9 @@ layout: default
 		color: var(--dark-color-text);
 		overflow: auto;
 		text-align: center;
+		position:relative;
+		display:block;
+		overflow:hidden;
 	}
 
 	#donations h1,
@@ -209,28 +212,420 @@ layout: default
 			text-align: left;
 		}
 	}
+/*------*/
+:root{
+	--experimental-accent:#ff5722;
+	--mainTransition: 1s;
+}
+.feature .body {
+		padding: 24px;
+		background-color: rgba(51, 63, 103, 1);
+		height: 40%;
+		position: relative;
+	}
+
+.feature > img{
+	transition: 1s;
+	pointer-events: none;
+}
+.feature:hover > img{
+		transform: scale(1.06);
+	}
+.feature:hover{
+	box-shadow: 0px 5px 10px #1010105b;
+	border-bottom:solid #fff 2px;
+}
+.feature:active{
+	transform: scale(.95);
+}
+.feature-link:active{
+	outline: 0 !important;
+	border: 0 !important;
+}
+.feature{
+	transition: 1s;
+	box-sizing:border-box;
+}
+.learnMore{
+	background:#000 !important;
+	border-bottom:solid #fff 2px;
+	transition: var(--mainTransition);
+	overflow:hidden;
+}
+.learnMore:hover{ 
+transform: scale(1.06);
+	box-shadow: 0px 5px 10px #1010105b;
+	color:#fff !important;
+}
+.learnMore:active{ 
+transform: scale(.99);
+}
+
+.getInvolved{
+	box-sizing: border-box;
+	transition: var(--mainTransition);
+	display: grid;
+	grid-template-rows: .5fr .45fr .05fr;
+	align-content: space-between;
+}
+.getInvolved:hover{
+	cursor: pointer;
+	background:#ffffff !important;
+	border-bottom:solid #fff 2px;
+	box-shadow: 0px 5px 10px #1010105b;
+	color:#000;
+	border-radius: 8px;
+	transform: translateY(-2px);
+}
+.getInvolved:hover h4{
+	color: var(--base-color-text-title);
+}
+#hero-shadow{
+	position: absolute;
+	pointer-events:none;
+	bottom:0;
+	left:0;
+	right:0;
+	height:10%;
+	background:linear-gradient(#0000,#000a);
+}
+
+.dropBtn{
+	position:absolute;
+	width:100%;
+	height:0;
+	top:0;
+	left:0;
+	right:0;
+	background: var(--dark-color);
+	transition: var(--mainTransition);
+	z-index:0;
+	display:block;
+}
+
+.getInvolved:hover .dropBtn{
+	height:100%;
+}
+.getInvolvedContainer{
+	width:100%;
+	position:relative;
+	transition: var(--mainTransition);
+}
+
+.getInvolvedContainer:hover > .dropBtn{
+	background:	var(--primary-color);
+}
+.getInvolvedContainer:hover{
+	transform:scale(1.01);
+}
+.getInvolvedImgBox{
+	width:250px;
+	height:250px;
+	position:relative;
+	display:block;
+	margin:auto;
+}
+.getInvolvedImg{
+	width:100%;
+	height:100%;
+	left:0;
+	right:0;
+	top:0;
+	bottom:0;
+	position:absolute;
+	display:block;
+	object-fit:contain;
+	margin:auto;
+	transition: var(--mainTransition);
+}
+.getInvolved:active{
+	transform: scale(.95);
+}
+.getInvolved:hover * .getInvolvedImgFront{
+	transform: scale(1.1);
+	filter: drop-shadow(0 0 0.75rem rgba(116, 116, 116, 0.236));
+}
+.btn-flat-unfrosted{
+	background-color: rgb(111 111 111 / 27%);
+	transition: var(--mainTransition);
+}
+.getInvolved:hover * .btn-front{
+	color:#fff !important;
+}
+
+.btn-front{
+	box-shadow: none;
+	background-color: transparent;
+	color: var(--link-color);
+	margin: auto;
+	pointer-events:none;
+}
+.plain-link {
+	text-decoration: none;
+	}
+
+.card{
+	transition: 1s !important;
+}
+.card:hover{
+	transform: scale(1.06) !important;
+	box-shadow: 0 0 0 2px white, 0px 15px 20px #1010105b;;
+	z-index:1;
+}
+
+.donationsBanner{
+	background: linear-gradient(45deg, black, transparent);
+}
+#donationsContent::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right:0;
+  width: 100%;
+  height: 0%;
+  background-color: #fff;
+  transition: 0.3s ease;
+  z-index: -1;
+  pointer-events:none;
+}
+
+#donationsContent:hover::before {
+  height: 100%;
+}
+
+#donationsContent{
+	background: linear-gradient(45deg, black, transparent);
+	z-index: 1;
+    position: relative;
+    box-sizing: border-box;
+    border: 4px solid #fff;
+	box-shadow: 0px 5px 10px #1010105b;
+}
+#donationsContent:hover{
+	color:#000;
+}
+#donationsContent:hover * #foundation_graphic{
+	content: url(/assets/home/foundation/godot-foundation-logo-light.svg);
+}
+
+#donationsContent:hover .donations-btn{
+	background: var(--primary-color) !important;
+}
+
+.donations-btn{
+	transition:1s;
+}
+.donations-btn:hover{
+	transform: scale(1.08);
+}
+#foundation_graphic{
+	transition: 1s;
+}
+#foundation_graphic:hover{
+	transform: scale(1.04);
+}
+
+
+#hero-img{
+	position: absolute;
+    right: 0%;
+    top: 0;
+    mix-blend-mode: overlay;
+    transform: rotate(-25deg);
+	pointer-events:none;
+	transition: 1s;	
+}
+
+.hero > .background-image:hover{
+	transform: scale(1.1);
+}
+.background-image{
+	transition: transform 4s;
+	background-attachment: fixed;
+}
+.hero-text{
+	filter: drop-shadow(0 0.1rem 0.75rem rgba(36, 36, 30, 1));
+}
+#credits{
+	opacity: .7;
+}
+
+.learnMore::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background-color: var(--primary-color);
+  transition: left 0.3s ease;
+  z-index: -1;
+  opacity:0;
+  pointer-events:none;
+}
+
+.learnMore:hover::before {
+  left: 0;
+  opacity:1;
+}
+
+#nav * li {
+position:relative;
+}
+
+#nav * li:not(.fund) > a::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right:0;
+  width: 100%;
+  height: 0;
+  background: linear-gradient(#fff0,var(--dark-color));
+  transition: 0.3s ease;
+  z-index: -1;
+  margin:0;
+}
+
+#nav * li:not(.fund) > a:hover::before {
+  height: 100%;
+  box-sizing: border-box;
+  border-bottom:#fff 2px solid;
+  transform: translate(0,-2px);
+}
+
+.fund{
+	transition: 1s;
+	margin:2px;
+}
+.fund:hover{
+	transform: scale(1.08);
+}
+
+@media (prefers-color-scheme: dark) {
+	.footerGear {
+ 		content: url(/assets/home/gear-dark.svg);
+	}
+}
+
+@media (max-width: 1200px) {
+.fund{
+	margin:0px;
+}
+.fund:hover{
+	transform: none;
+}
+#nav * li > a::before {
+	background: none;
+}
+.footerGear{
+	filter:invert(1);
+	opacity: .4;
+	}
+}
+.cursorOverload{
+	pointer-events: none !important;
+}
+
+.cursorOverloadAuto{
+	pointer-events: auto !important;
+}
+.hero-download{
+	transition: 1s;
+	}
+.hero-download:hover{
+	transform: scale(1.03);
+	box-shadow: 0px 5px 10px #1010105b;
+	filter: drop-shadow(0 0 0.75rem rgba(116, 116, 116, 0.236));
+}
+.hero-download:active{
+	transform: scale(.99);
+}
+.hero-download:hover > .download-hint{
+	transition: 1s;
+	width: 0;
+}
+
+.btn-hero-learn-more{
+	transition: 1s;
+	overflow:hidden;
+}
+.btn-hero-learn-more:hover{
+	transform: scale(1.06);
+	box-shadow: 0px 5px 10px #1010105b;
+}
+.btn-hero-learn-more:active{
+	transform: scale(.99);
+}
+
+.btn-hero-learn-more::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background-color: var(--primary-color);
+  transition: left 0.3s ease;
+  z-index: -1;
+  opacity:0;
+  pointer-events:none;
+}
+
+.btn-hero-learn-more:hover::before {
+  left: 0;
+  opacity:1;
+}
+
+
+.rowPop{
+	transition: 1s;
+}
+.rowPop:hover{
+	transform: translate(0,-2px);
+}
+.header-margin-overide{
+	margin-top: 0 !important;
+	padding-top: 0 !important;
+}
+
+.moreNews{
+	color: var(--primary-color) !important;
+}
+
+.footerPop{
+	transition: 1s;
+}
+.footerPop:hover a{
+	z-index:1;
+	transform: scale(1.04);
+}
+
 </style>
 
 <section class="hero">
 	<div class="background-image" style="background-image: url()"></div>
-	<div class="wrapper">
+	<div id="hero-shadow"></div>
+	<img src="/assets/home/logo_silhouette.svg" id="hero-img">
+	<div class="wrapper cursorOverload">
 		<div class="copy container">
 			<h1>The game engine you've been waiting&nbsp;for.</h1>
-			<p>The Godot Engine is a free, all-in-one, cross-platform game engine that makes it easy for you to create 2D and
+			<p class="hero-text">The Godot Engine is a free, all-in-one, cross-platform game engine that makes it easy for you to create 2D and
 				3D games.</p>
 
-			<div class="main-download">
+			<div class="main-download  cursorOverloadAuto">
 				{% assign stable_version_3 = site.data.versions | find: "featured", "3" %}
 				{% assign stable_version_4 = site.data.versions | find: "featured", "4" %}
 
 				<div class="main-download-links">
-					<a href="/download/windows" class="btn btn-download set-os-download-url" data-version="4"
+					<a href="/download/windows" class="btn btn-download set-os-download-url hero-download" data-version="4"
 						title="Download the latest version of Godot 4">
 						<div class="download-title">Download Latest</div>
 						<div class="download-hint">{{ stable_version_4.name }}</div>
 					</a>
 
-					<a href="/download/windows" class="btn btn-download set-os-download-url" data-version="3"
+					<a href="/download/windows" class="btn btn-download set-os-download-url hero-download" data-version="3"
 						title="Download the long-term support version of Godot 3">
 						<div class="download-title">Download LTS</div>
 						<div class="download-hint">{{ stable_version_3.name }}</div>
@@ -253,7 +648,7 @@ layout: default
 		{% assign latest_posts = site.article | sort:"date" | reverse %}
 		{% for post in latest_posts limit:1 %}
 		<a href="{{ post.url }}" style="text-decoration: none">
-			<article class="article-card">
+			<article class="article-card rowPop">
 				<div class="thumbnail" style="background-image: url('{{ post.image }}');"></div>
 				<div class="content">
 					<h3>{{ post.title }}</h3>
@@ -268,7 +663,7 @@ layout: default
 				{% for post in latest_posts limit:3 offset:1 %}
 				{% if post != posts[0] %}
 				<a href="{{ post.url }}" style="text-decoration: none;">
-					<article class="article-card row">
+					<article class="article-card row rowPop">
 						<div class="thumbnail" style="background-image: url('{{ post.image }}');" href="{{ post.url }}"></div>
 						<div>
 							<h3>{{ post.title }}</h3>
@@ -279,7 +674,7 @@ layout: default
 				{% endif %}
 				{% endfor %}
 				<div class="button-container">
-					<a href="/blog" class="btn no-margin">More News</a>
+					<a href="/blog" class="btn no-margin moreNews learnMore">More News</a>
 				</div>
 			</div>
 		</div>
@@ -376,7 +771,7 @@ layout: default
 	</div>
 
 	<div class="features-learn-more">
-		<a href="/features" class="btn btn-flat btn-flat-white btn-flat-frosted">Learn more about using Godot</a>
+		<a href="/features" class="btn btn-flat btn-flat-white btn-flat-unfrosted learnMore">Learn more about using Godot</a>
 	</div>
 </section>
 
@@ -387,44 +782,68 @@ layout: default
 	</p>
 
 	<div class="flex eqsize responsive">
-
-		<div class="text-center base-padding">
-			<img src="/assets/home/code.svg" alt="" width="250" height="250" loading="lazy">
+		<div class="text-center base-padding getInvolved" onclick="window.location.href='https://docs.godotengine.org/en/stable/community/contributing/ways_to_contribute.html#contributing-code'">
+			<div class="getInvolvedImgBox">
+				<img src="/assets/home/code_back.svg" class="getInvolvedImg" alt="" loading="lazy">
+				<img src="/assets/home/code_front.svg" class="getInvolvedImg getInvolvedImgFront" alt="" loading="lazy">
+			</div>
+			<div>
 			<h4>Code</h4>
 			<p>
 				If you know how to code, you can help by fixing bugs and working with engine contributors towards the
 				implementation of new features.
 			</p>
-			<a href="https://docs.godotengine.org/en/stable/community/contributing/ways_to_contribute.html#contributing-code"
-				class="btn btn-flat btn-flat-frosted" target="_blank" rel="noopener">Learn more</a>
+			</div>
+			<div class="getInvolvedContainer">
+				<div class="dropBtn"></div>
+				<a href="https://docs.godotengine.org/en/stable/community/contributing/ways_to_contribute.html#contributing-code"
+				class="btn btn-front" target="_blank" rel="noopener">Learn more</a>
+			</div>
 		</div>
-
-		<div class="text-center base-padding">
-			<img src="/assets/home/document.svg" alt="" width="250" height="250" loading="lazy">
+	
+		<div class="text-center base-padding getInvolved" onclick="window.location.href='https://docs.godotengine.org/en/stable/community/contributing/ways_to_contribute.html#contributing-to-the-documentation'">
+			<div class="getInvolvedImgBox">
+				<img src="/assets/home/document_back.svg" class="getInvolvedImg" alt="" loading="lazy">
+				<img src="/assets/home/document_front.svg" class="getInvolvedImg getInvolvedImgFront" alt="" loading="lazy">
+			</div>
+			<div>
 			<h4>Document</h4>
 			<p>
 				Documentation quality is essential in a game engine; help make it better by updating the API reference, writing
 				new guides or submitting corrections.
 			</p>
+			</div>
+			<div class="getInvolvedContainer">
+				<div class="dropBtn"></div>
 			<a href="https://docs.godotengine.org/en/stable/community/contributing/ways_to_contribute.html#contributing-to-the-documentation"
-				class="btn btn-flat btn-flat-frosted" target="_blank" rel="noopener">Learn more</a>
+				class="btn btn-front" target="_blank" rel="noopener">Learn more</a>
+			</div>
 		</div>
-
-		<div class="text-center base-padding">
-			<img src="/assets/home/report.svg" alt="" width="250" height="250" loading="lazy">
+	
+		<div class="text-center base-padding getInvolved" onclick="window.location.href='https://docs.godotengine.org/en/stable/community/contributing/ways_to_contribute.html#testing-and-reporting-issues'">
+			<div class="getInvolvedImgBox">
+				<img src="/assets/home/report_back.svg" class="getInvolvedImg" alt="" loading="lazy">
+				<img src="/assets/home/report_front.svg" class="getInvolvedImg getInvolvedImgFront" alt="" loading="lazy">
+			</div>
+			<div>
 			<h4>Report</h4>
 			<p>
 				Found a problem with the engine? Don't forget to report it so that developers can track it down.
 			</p>
+			</div>
+			<div class="getInvolvedContainer">
+				<div class="dropBtn"></div>
 			<a href="https://docs.godotengine.org/en/stable/community/contributing/ways_to_contribute.html#testing-and-reporting-issues"
-				class="btn btn-flat btn-flat-frosted" target="_blank" rel="noopener">Learn more</a>
+				class="btn btn-front" target="_blank" rel="noopener">Learn more</a>
+			</div>
 		</div>
+	
 
 	</div>
 </section>
 
-<section id="donations" class="padded">
-	<div class="container sm-full">
+<section id="donations" class="padded donationsBanner">
+	<div class="container sm-full" id="donationsContent">
 		<a href="https://godot.foundation" target="_blank" style="display: inline-block;">
 			<img id="foundation_graphic" src="/assets/home/foundation/godot-foundation-logo-dark.svg" alt="Godot Foundation logo" width="1" height="1"
 			class="img-auto-size" loading="lazy">
@@ -434,7 +853,7 @@ layout: default
 			Godot&nbsp;Engine even more awesome!
 		</p>
 
-		<a href="/donate" class="btn btn-flat btn-flat-white btn-flat-frosted">Donate</a>
+		<a href="/donate" class="btn btn-flat btn-flat-white donations-btn">Donate</a>
 	</div>
 </section>
 
@@ -488,6 +907,7 @@ layout: default
 
 		let author = authors[Math.floor(Math.random() * authors.length)];
 		document.querySelector('.hero .background-image').style.backgroundImage = `url(${author.image})`;
+		document.querySelector('.hero .background-image').style.backgroundAttachment = `fixed`;
 		document.querySelector('.hero .credits a').href = author.url;
 		document.querySelector('.hero .credits a span.game').innerText = author.game;
 		document.querySelector('.hero .credits a span.by').innerText = ' - ' + author.by;
@@ -499,12 +919,26 @@ layout: default
 
 			// Parallax effect lags on mobile, so we disable it based on the window resolution.
 			const parallaxImage = document.querySelector('section.hero .background-image');
+			const parallaxLogo = document.querySelector('section.hero #hero-img');
 			const parallaxMinWidth = 768;
 			const parallaxSpeed = 0.4;
-
+			const rotationSpeed = 0.04;
+			const rotationSpeedBG = 0.0004;
+			let logoCounter = false;
 			const parallaxTick = () => {
 				if (window.innerWidth > parallaxMinWidth) {
-					parallaxImage.style.transform = `translateY(${window.pageYOffset * parallaxSpeed}px)`;
+					parallaxLogo.style.transform = `translateY(${window.pageYOffset * parallaxSpeed}px) rotate(-${window.pageYOffset * rotationSpeed + 5}deg)`;
+					//parallaxImage.style.transform = `translateY(${window.pageYOffset * parallaxSpeed}px) rotate(${window.pageYOffset * rotationSpeedBG}deg)`;
+					
+					if(logoCounter === true){
+					const heroSection = document.querySelector('section.hero');
+					const rect = heroSection.getBoundingClientRect();
+					const offsetBottom = window.innerHeight - rect.bottom;
+					if (offsetBottom < 0 && !logoPhaseStarted) {
+					document.getElementById("hero-img").src = "/assets/home/logo_silhouette_open.svg";
+					}
+					}else{logoCounter = true;logoBlink();}
+					
 				} else {
 					parallaxImage.style.transform = 'none';
 				}
@@ -520,6 +954,23 @@ layout: default
 		}
 	}
 	});
+	let logoPhase = 0;
+	let logoPhaseStarted = false;
+	let logoTimer;
+	function logoBlink(){
+		logoPhaseStarted = true;
+		if(logoPhase === 0){
+			document.getElementById("hero-img").src = "/assets/home/logo_silhouette.svg";
+			clearTimeout(logoTimer);
+			logoTimer = setTimeout(logoBlink,160);
+			logoPhase = 1;
+		}else{
+			document.getElementById("hero-img").src = "/assets/home/logo_silhouette_open.svg";
+			clearTimeout(logoTimer);
+			logoTimer = setTimeout(logoBlink,10000);
+			logoPhase = 0;
+		}
+	}
 </script>
 
 {% include footer.html %}

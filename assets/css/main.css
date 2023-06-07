@@ -1374,3 +1374,44 @@ article.article-card .info span {
   font-size: 14px;
   color: var(--secondary-color-text);
 }
+
+#footer-shadow{
+	position: absolute;
+	pointer-events:none;
+	top:0;
+	left:0;
+	right:0;
+	height:10%;
+	background:linear-gradient(#0000001a,#0000);
+  display:block;
+}
+
+footer{
+	position:relative;
+	overflow:hidden;
+}
+footer a{
+	color:#fff;
+}
+.footerGear{
+	pointer-events:none;
+	position:absolute;
+	transform: translate(-50%, -50%);
+	animation: gearAnimFooter 7s linear infinite;
+	display:block;
+	transition: 1s;
+	}
+	@keyframes gearAnimFooter{
+	  0% { transform: translate(-50%, -50%) rotate(360deg); }
+	  100% { transform: translate(-50%, -50%) rotate(0deg); }
+	}
+#gear2{
+	height: 10%;
+    left: 10vh;
+    top: 0%;
+}
+#gear1{
+	height: 250px;
+    right: -1%;
+    top: 100%;
+}

@@ -1,0 +1,17 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 288 288" width="288" height="288">
+	<title>gear-svg</title>
+	<style>
+		.s0 { fill: #25282b } 
+	</style>
+	<g id="gear">
+		<path id="gear copy 2" class="s0" d="m144 144l-31-106 12-38 38 0.1 12 37.9z"/>
+		<path id="gear copy 3" class="s0" d="m144 144l31 106-12 38-38-0.1-12-37.9z"/>
+		<path id="gear copy 4" class="s0" d="m144 144l106-31 38 12-0.1 38-37.9 12z"/>
+		<path id="gear copy 5" class="s0" d="m144 144l-106 31-38-12 0.1-38 37.9-12z"/>
+		<path id="gear copy 6" class="s0" d="m144 144l53-96.9 35.4-18.4 26.8 27-18.3 35.3z"/>
+		<path id="gear copy 7" class="s0" d="m144 144l-53 96.9-35.4 18.4-26.8-27 18.3-35.3z"/>
+		<path id="gear copy 8" class="s0" d="m144 144l96.9 53 18.4 35.4-27 26.8-35.3-18.3z"/>
+		<path id="gear copy 9" class="s0" d="m144 144l-96.9-53-18.4-35.4 27-26.8 35.3 18.3z"/>
+		<path id="Layer 2" class="s0" d="m144 254c-60.8 0-110-49.2-110-110 0-60.8 49.2-110 110-110 60.8 0 110 49.2 110 110 0 60.8-49.2 110-110 110z"/>
+	</g>
+</svg>
